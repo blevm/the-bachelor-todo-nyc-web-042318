@@ -25,7 +25,6 @@ counts = Hash.new(0)
     contestant.each do |stat, stat_value|
       if stat == "hometown"
           counts[stat_value] += 1
-        end
       end
     end
   end
