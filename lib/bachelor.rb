@@ -31,7 +31,7 @@ counts = Hash.new(0)
     end
   end
 
-  return counts
+  return counts[hometown]
 
 end
 
