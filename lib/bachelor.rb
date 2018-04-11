@@ -22,10 +22,12 @@ def count_contestants_by_hometown(data, hometown)
 counts = Hash.new(0)
 
   data.each do |season, contestant|
-    contestant.each do |stat, stat_value|
-      binding.pry
-      if stat == "hometown"
-        counts[stat_value] += 1
+    contestant.each do |stats, stat_key|
+      stats.each do |stat_key, stat_value|
+        binding.pry
+        if stat_key == "hometown"
+          counts[stat_value] += 1
+        end
       end
     end
   end
