@@ -20,6 +20,14 @@ end
 
 def count_contestants_by_hometown(data, hometown)
   # code here
+  counts = Hash.new(0)
+
+  data.each do |word|
+    counts[word] += 1
+  end
+
+  return counts
+
 end
 
 def get_occupation(data, hometown)
