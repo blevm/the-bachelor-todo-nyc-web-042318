@@ -24,7 +24,6 @@ counts = Hash.new(0)
   data.each do |season, contestant|
     contestant.each do |stats, stat_key|
       stats.each do |stat_key, stat_value|
-        binding.pry
         if stat_key == "hometown"
           counts[stat_value] += 1
         end
