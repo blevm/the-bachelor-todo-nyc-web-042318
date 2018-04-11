@@ -1,5 +1,11 @@
 def get_first_name_of_season_winner(data, season)
-  data[season].fetch("Winner")
+  data.each |which_season, contestant|
+   if which_season == season
+     contestant.each |stat, stat_value|
+     if :status[stat_value] == "Winner"
+      return :name
+     end
+   end
 end
 
 def get_contestant_name(data, occupation)
