@@ -1,6 +1,6 @@
 require "pry"
 
-{
+data = {
    "season 19":[
       {
          "name":"Ashley Iaconetti",
