@@ -24,8 +24,7 @@ counts = Hash.new(0)
   data.each do |season, contestant|
     contestant.each do |stat, stat_value|
       if stat == "hometown"
-        stat.each do |word|
-          counts[word] += 1
+          counts[stat_value] += 1
         end
       end
     end
