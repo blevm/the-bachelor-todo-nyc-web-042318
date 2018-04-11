@@ -37,13 +37,14 @@ end
 
 def get_occupation(data, hometown)
   data.each do |season, contestant|
-    contestant.each do |stat, stat_value|
-      if stat["hometown"] == hometown
-        return stat["occupation"]
+    contestant.each do |stats, stat_key|
+      stats.each do |stat_key, stat_value|
+        if stat_key == "hometown" && stat_value == hometown
+          return stats["occupation"]
+        end
       end
     end
   end
-end
 
 def get_average_age_for_season(data, season)
   # code here
