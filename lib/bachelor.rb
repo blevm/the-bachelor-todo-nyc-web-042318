@@ -59,5 +59,5 @@ def get_average_age_for_season(data, season)
   end
   sum = ages.inject(0.0) { |result, el| result + el }
   average = sum / ages.size
-  return average.floor
+  return average.ceil
 end
