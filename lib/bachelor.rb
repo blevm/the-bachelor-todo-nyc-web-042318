@@ -36,7 +36,13 @@ counts = Hash.new(0)
 end
 
 def get_occupation(data, hometown)
-  # code here
+  data.each do |season, contestant|
+    contestant.each do |stat, stat_value|
+      if stat["hometown"] == hometown
+        return stat["occupation"]
+      end
+    end
+  end
 end
 
 def get_average_age_for_season(data, season)
