@@ -56,6 +56,7 @@ def get_average_age_for_season(data, season)
         if stat_key == "age"
           ages << age.to_i
         end
+        binding.pry
       end
     end
   end
