@@ -3,7 +3,7 @@ require "pry"
 def get_first_name_of_season_winner(data, season)
   data[season].each do |contestant|
     if stat == "status" && stat_value == "Winner"
-      return data[season][("name").strip.first]
+      return data[season][("name").split.first]
     end
   end
 end
