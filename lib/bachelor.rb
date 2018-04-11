@@ -30,15 +30,9 @@ counts = Hash.new(0)
       end
     end
   end
-  
-  
-
-  data.each do |word|
-    counts[word] += 1
-  end
 
   return counts
-  
+
 end
 
 def get_occupation(data, hometown)
