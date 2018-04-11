@@ -19,8 +19,19 @@ def get_contestant_name(data, occupation)
 end
 
 def count_contestants_by_hometown(data, hometown)
-  # code here
-  counts = Hash.new(0)
+counts = Hash.new(0)
+
+  data.each do |season, contestant|
+    contestant.each do |stat, stat_value|
+      if stat == "hometown"
+        stat.each do |word|
+          counts[word] += 1
+        end
+      end
+    end
+  end
+  
+  
 
   data.each do |word|
     counts[word] += 1
