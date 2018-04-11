@@ -52,9 +52,10 @@ def get_average_age_for_season(data, season)
   data[season].each do |contestant|
     contestant.each do |stats, stat_key|
       stats.each do |stat_key, stat_value|
-        if stat_key == "hometown"
-          counts[stat_value] += 1
+        if stat_key == "age"
+          ages << age.to_i
         end
+        binding.pry
       end
     end
   end
